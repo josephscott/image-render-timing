@@ -16,15 +16,22 @@
 <div class="grid">
 	<div>
 
-<!-- tumblr:start -->
-
-<img class="RoN4R tPU70" srcset="https://64.media.tumblr.com/0a1a22241471569744b28b102eeb65da/817d8b9f8f97bd9a-10/s75x75_c1/3560e4e222be8f8884c387cc51345b605d0a9dc6.gifv 75w, https://64.media.tumblr.com/0a1a22241471569744b28b102eeb65da/817d8b9f8f97bd9a-10/s100x200/761ca27e35c01d9ef2775b30557a8e3f5e8b4d9d.gifv 100w, https://64.media.tumblr.com/0a1a22241471569744b28b102eeb65da/817d8b9f8f97bd9a-10/s250x400/02253e77a3e9f509ce91e307b0e9846ccca36e9a.gifv 180w, https://64.media.tumblr.com/0a1a22241471569744b28b102eeb65da/817d8b9f8f97bd9a-10/s250x250_c1/8415eeae155928e400cc4e74ab87a4e5d6e4dc6b.gifv 180w" sizes="(max-width: 540px) 50vw, 150px" alt="Image" style="border: 5px solid #abcdef; width: 150px; height: 267px;">
-
-<!-- tumblr:end -->
+<img elementtiming="track-image-timing" srcset="https://44.media.tumblr.com/0a1a22241471569744b28b102eeb65da/817d8b9f8f97bd9a-10/s250x400_f1/d4948d158dd4c0a5659b94715e8154271dc8a8eb.gifv" alt="Image" style="border: 5px solid #abcdef;">
+<img elementtiming="track-image-timing" srcset="https://64.media.tumblr.com/0a1a22241471569744b28b102eeb65da/817d8b9f8f97bd9a-10/s250x400/02253e77a3e9f509ce91e307b0e9846ccca36e9a.gifv" alt="Image" style="border: 5px solid #abcdef;">
 
 	</div>
 </div>
 
 </main>
+
+<script>
+const track_image_timing = new PerformanceObserver( ( list ) => {
+	list.getEntries().every( ( e ) => {
+		console.log( e );
+	} );
+} );
+track_image_timing.observe( { type: 'element', buffered: true } );
+</script>
+
 </body>
 </html>
